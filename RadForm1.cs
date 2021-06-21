@@ -35,8 +35,10 @@ namespace Feature1
                 Thread t2 = new Thread(new ParameterizedThreadStart(dowork1));
                 t2.Start("192.168.1.2");
 
-               
 
+                MachineInfo machOneO = new Machine.MachineOne();
+                machOneO.IP = "192.168.0.1";
+                machOneO.connectCNC();
                 timer1.Enabled = true;
                 timer1.Start();
                 timer1.Interval = 1000 * 25;
@@ -97,6 +99,8 @@ namespace Feature1
 
         void MachNumber(object ip)
         {
+            
+            
             short ret = ConnectCNC((string)ip, 8193);
 
             if (ret == Focas1.EW_OK)
@@ -214,9 +218,9 @@ namespace Feature1
              ParameterizedThreadStart 則可以指定方法夾帶參數，但只限制一個且型態為 object 
              */
             Thread t1 = new Thread(new ParameterizedThreadStart(dowork)); 
-            t1.Start("192.6.1.6");
+            t1.Start("192.168.1.1");
             Thread t2 = new Thread(new ParameterizedThreadStart(dowork1));
-            t2.Start("192.6.1.7");
+            t2.Start("192.168.1.2");
         }
 
     }

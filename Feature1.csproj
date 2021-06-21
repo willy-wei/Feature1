@@ -89,6 +89,7 @@
   <ItemGroup>
     <Compile Include="fwlib64.cs" />
     <Compile Include="MachineInfo.cs" />
+    <Compile Include="Machine\MachineOne.cs" />
     <Compile Include="Machine\Machines.cs" />
     <Compile Include="RadForm1.cs">
       <SubType>Form</SubType>

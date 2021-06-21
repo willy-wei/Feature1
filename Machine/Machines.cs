@@ -19,7 +19,7 @@ namespace Feature1.Machine
             return ret;
         }
         
-        public static short UnconnectCNC() 
+        public static short DisconnectCNC() 
         {
             short ret;
             ret = Focas1.cnc_freelibhndl(FLIBHNDL);
@@ -46,9 +46,7 @@ namespace Feature1.Machine
             }
             return pmcRet;
         }
-
-
-
+  
         public enum AdrType 
         { 
             G = 0,

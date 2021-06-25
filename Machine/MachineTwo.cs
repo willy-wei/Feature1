@@ -6,24 +6,21 @@ using System.Threading.Tasks;
 
 namespace Feature1.Machine
 {
-    class MachineOne : MachineInfo
+    class MachineTwo : MachineInfo
     {
         private string IP;
         private ushort PORT;
         private int timeout = 10;
-        private static ushort FLIBHNDL;
+        private ushort FLIBHNDL;
         private string machineName;
         Focas1.ODBST oDBST = new Focas1.ODBST();
 
-        string MachineInfo.machineName { get => machineName; set => machineName = value; }
-        string MachineInfo.IP { get => this.IP; set => this.IP = value; }
+        string MachineInfo.IP { get => this.IP;  set => this.IP = value; }
         ushort MachineInfo.PORT { set => this.PORT = value; }
-
-
+        string MachineInfo.machineName { get => this.machineName; set => this.machineName = value; }
 
         int MachineInfo.axis()
         {
-            
             throw new NotImplementedException();
         }
 
@@ -34,23 +31,30 @@ namespace Feature1.Machine
             ret = Focas1.cnc_allclibhndl3(IP, PORT, 10, out FLIBHNDL);
             return ret;
         }
-        public short disConectCNC()
+
+        short MachineInfo.current()
+        {
+            throw new NotImplementedException();
+        }
+
+        short MachineInfo.disConectCNC()
         {
             short ret;
             ret = Focas1.cnc_freelibhndl(FLIBHNDL);
             return ret;
         }
+
         byte MachineInfo.feedRate()
         {
             throw new NotImplementedException();
         }
 
-        string  MachineInfo.machineStatus()
+        string MachineInfo.machineStatus()
         {
             short ret;
             string statusText = "";
-           
-            ret = Focas1.cnc_statinfo(FLIBHNDL,oDBST);
+
+            ret = Focas1.cnc_statinfo(FLIBHNDL, oDBST);
             if (ret == Focas1.EW_OK)
             {
                 if (oDBST.run == 0 || oDBST.run == 1)
@@ -76,11 +80,11 @@ namespace Feature1.Machine
         string MachineInfo.mode()
         {
             string modeStr = "";
-            switch (oDBST.aut) 
+            switch (oDBST.aut)
             {
                 case 1:
                     modeStr = "MEMORY";
-                break;
+                    break;
                 case 3:
                     modeStr = "EDIT";
                     break;
@@ -127,19 +131,6 @@ namespace Feature1.Machine
             throw new NotImplementedException();
         }
 
-        short MachineInfo.disConectCNC()
-        {
-            throw new NotImplementedException();
-        }
-
-        short MachineInfo.current()
-        {
-            short rdcurrent = 0;
-            short[] currentArray = new short[Focas1.MAX_AXIS];
-            Focas1.ODBDIAGIF oDBDGN = new Focas1.ODBDIAGIF();
-            Focas1.cnc_rddiaginfo(FLIBHNDL, 1,4901 ,oDBDGN);
-            return rdcurrent;
-
-        }
+        
     }
 }

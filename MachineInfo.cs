@@ -8,18 +8,19 @@ namespace Feature1
 {
     interface MachineInfo
     {
-        string IP { set;}
+        string IP { get; set; }
         ushort  PORT { set; }
         string machineName { get; set; }
         int axis();
-        int machineStatus();
+        string  machineStatus();
         byte tool();
         byte spindle();
-        byte mode();
+        string mode();
         byte rapid();
         byte feedRate();
         short connectCNC();
-
+        short disConectCNC();
+        short current();
 
     }
 }

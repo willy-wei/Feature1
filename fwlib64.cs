@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 
 public class Focas1
 {
-    /* Axis define */
+    /* Axis defcnc_diagnosr ine */
 #if FS30D
     public const short MAX_AXIS = 32;
 #elif M_AXIS2
@@ -9817,10 +9817,10 @@ public class Focas1
     [DllImport("FWLIB64.dll", EntryPoint="cnc_diagnosr")]
     public static extern short cnc_diagnosr( ushort FlibHndl,
         ref short a, short b, ref short c, ref short d, [Out,MarshalAs(UnmanagedType.AsAny)] Object e );
-//  [DllImport("FWLIB64.dll", EntryPoint="cnc_diagnosr")]
-//  public static extern short cnc_diagnosr( ushort FlibHndl,
-//      ref short a, short b, ref short c, ref short d, [Out,MarshalAs(UnmanagedType.LPStruct)] ODBDGN e );
 
+    //  [DllImport("FWLIB64.dll", EntryPoint="cnc_diagnosr")]
+    //cnc_dianoss  public static extern short cnc_diagnosr( ushort FlibHndl,
+    //      ref short a, short b, ref short c, ref short d, [Out,MarshalAs(UnmanagedType.LPStruct)] ODBDGN e );
     /* read A/D conversion data */
     [DllImport("FWLIB64.dll", EntryPoint="cnc_adcnv")]
     public static extern short cnc_adcnv( ushort FlibHndl, short a, short b, [Out,MarshalAs(UnmanagedType.LPStruct)] ODBAD c );

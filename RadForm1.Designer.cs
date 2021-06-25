@@ -30,14 +30,14 @@ namespace Feature1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RadForm1));
             this.radPageView1 = new Telerik.WinControls.UI.RadPageView();
             this.radPageViewPage1 = new Telerik.WinControls.UI.RadPageViewPage();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.machEight = new Feature1.UserControl1();
             this.machSeven = new Feature1.UserControl1();
             this.machSix = new Feature1.UserControl1();
             this.machFive = new Feature1.UserControl1();
-            this.machfour = new Feature1.UserControl1();
+            this.machFour = new Feature1.UserControl1();
             this.machThree = new Feature1.UserControl1();
             this.machTwo = new Feature1.UserControl1();
             this.machOne = new Feature1.UserControl1();
@@ -46,6 +46,7 @@ namespace Feature1
             this.alarmSum = new Feature1.StatusNumber();
             this.prepareSum = new Feature1.StatusNumber();
             this.runSum = new Feature1.StatusNumber();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.radPageView1)).BeginInit();
             this.radPageView1.SuspendLayout();
             this.radPageViewPage1.SuspendLayout();
@@ -85,7 +86,7 @@ namespace Feature1
             this.radPageViewPage1.Controls.Add(this.machSeven);
             this.radPageViewPage1.Controls.Add(this.machSix);
             this.radPageViewPage1.Controls.Add(this.machFive);
-            this.radPageViewPage1.Controls.Add(this.machfour);
+            this.radPageViewPage1.Controls.Add(this.machFour);
             this.radPageViewPage1.Controls.Add(this.machThree);
             this.radPageViewPage1.Controls.Add(this.machTwo);
             this.radPageViewPage1.Controls.Add(this.machOne);
@@ -95,19 +96,19 @@ namespace Feature1
             this.radPageViewPage1.Controls.Add(this.prepareSum);
             this.radPageViewPage1.Controls.Add(this.runSum);
             this.radPageViewPage1.ForeColor = System.Drawing.Color.White;
-            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(8F, 8F);
+            this.radPageViewPage1.ItemSize = new System.Drawing.SizeF(14F, 14F);
             this.radPageViewPage1.Location = new System.Drawing.Point(41, 30);
             this.radPageViewPage1.Name = "radPageViewPage1";
             this.radPageViewPage1.Size = new System.Drawing.Size(1870, 1039);
             this.radPageViewPage1.Text = "radPageViewPage1";
             // 
-            // timer1
-            // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // machEight
             // 
+            this.machEight.cncAlarmImage = ((System.Drawing.Image)(resources.GetObject("machEight.cncAlarmImage")));
+            this.machEight.cncIdleImage = ((System.Drawing.Image)(resources.GetObject("machEight.cncIdleImage")));
             this.machEight.CncName = "label2";
+            this.machEight.cncPrepareImage = ((System.Drawing.Image)(resources.GetObject("machEight.cncPrepareImage")));
+            this.machEight.cncRunImage = ((System.Drawing.Image)(resources.GetObject("machEight.cncRunImage")));
             this.machEight.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machEight.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.machEight.CncStrStatus = "label1";
@@ -118,7 +119,11 @@ namespace Feature1
             // 
             // machSeven
             // 
+            this.machSeven.cncAlarmImage = ((System.Drawing.Image)(resources.GetObject("machSeven.cncAlarmImage")));
+            this.machSeven.cncIdleImage = ((System.Drawing.Image)(resources.GetObject("machSeven.cncIdleImage")));
             this.machSeven.CncName = "label2";
+            this.machSeven.cncPrepareImage = ((System.Drawing.Image)(resources.GetObject("machSeven.cncPrepareImage")));
+            this.machSeven.cncRunImage = ((System.Drawing.Image)(resources.GetObject("machSeven.cncRunImage")));
             this.machSeven.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machSeven.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.machSeven.CncStrStatus = "label1";
@@ -129,7 +134,11 @@ namespace Feature1
             // 
             // machSix
             // 
+            this.machSix.cncAlarmImage = ((System.Drawing.Image)(resources.GetObject("machSix.cncAlarmImage")));
+            this.machSix.cncIdleImage = ((System.Drawing.Image)(resources.GetObject("machSix.cncIdleImage")));
             this.machSix.CncName = "label2";
+            this.machSix.cncPrepareImage = ((System.Drawing.Image)(resources.GetObject("machSix.cncPrepareImage")));
+            this.machSix.cncRunImage = ((System.Drawing.Image)(resources.GetObject("machSix.cncRunImage")));
             this.machSix.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machSix.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.machSix.CncStrStatus = "label1";
@@ -140,7 +149,11 @@ namespace Feature1
             // 
             // machFive
             // 
+            this.machFive.cncAlarmImage = ((System.Drawing.Image)(resources.GetObject("machFive.cncAlarmImage")));
+            this.machFive.cncIdleImage = ((System.Drawing.Image)(resources.GetObject("machFive.cncIdleImage")));
             this.machFive.CncName = "label2";
+            this.machFive.cncPrepareImage = ((System.Drawing.Image)(resources.GetObject("machFive.cncPrepareImage")));
+            this.machFive.cncRunImage = ((System.Drawing.Image)(resources.GetObject("machFive.cncRunImage")));
             this.machFive.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machFive.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.machFive.CncStrStatus = "label1";
@@ -149,20 +162,28 @@ namespace Feature1
             this.machFive.Size = new System.Drawing.Size(360, 320);
             this.machFive.TabIndex = 9;
             // 
-            // machfour
+            // machFour
             // 
-            this.machfour.CncName = "label2";
-            this.machfour.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.machfour.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.machfour.CncStrStatus = "label1";
-            this.machfour.Location = new System.Drawing.Point(1307, 257);
-            this.machfour.Name = "machfour";
-            this.machfour.Size = new System.Drawing.Size(360, 320);
-            this.machfour.TabIndex = 8;
+            this.machFour.cncAlarmImage = ((System.Drawing.Image)(resources.GetObject("machFour.cncAlarmImage")));
+            this.machFour.cncIdleImage = ((System.Drawing.Image)(resources.GetObject("machFour.cncIdleImage")));
+            this.machFour.CncName = "label2";
+            this.machFour.cncPrepareImage = ((System.Drawing.Image)(resources.GetObject("machFour.cncPrepareImage")));
+            this.machFour.cncRunImage = ((System.Drawing.Image)(resources.GetObject("machFour.cncRunImage")));
+            this.machFour.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.machFour.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.machFour.CncStrStatus = "label1";
+            this.machFour.Location = new System.Drawing.Point(1307, 257);
+            this.machFour.Name = "machFour";
+            this.machFour.Size = new System.Drawing.Size(360, 320);
+            this.machFour.TabIndex = 8;
             // 
             // machThree
             // 
+            this.machThree.cncAlarmImage = ((System.Drawing.Image)(resources.GetObject("machThree.cncAlarmImage")));
+            this.machThree.cncIdleImage = ((System.Drawing.Image)(resources.GetObject("machThree.cncIdleImage")));
             this.machThree.CncName = "label2";
+            this.machThree.cncPrepareImage = ((System.Drawing.Image)(resources.GetObject("machThree.cncPrepareImage")));
+            this.machThree.cncRunImage = ((System.Drawing.Image)(resources.GetObject("machThree.cncRunImage")));
             this.machThree.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machThree.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.machThree.CncStrStatus = "label1";
@@ -173,7 +194,11 @@ namespace Feature1
             // 
             // machTwo
             // 
+            this.machTwo.cncAlarmImage = ((System.Drawing.Image)(resources.GetObject("machTwo.cncAlarmImage")));
+            this.machTwo.cncIdleImage = ((System.Drawing.Image)(resources.GetObject("machTwo.cncIdleImage")));
             this.machTwo.CncName = "label2";
+            this.machTwo.cncPrepareImage = ((System.Drawing.Image)(resources.GetObject("machTwo.cncPrepareImage")));
+            this.machTwo.cncRunImage = ((System.Drawing.Image)(resources.GetObject("machTwo.cncRunImage")));
             this.machTwo.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machTwo.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.machTwo.CncStrStatus = "label1";
@@ -184,7 +209,11 @@ namespace Feature1
             // 
             // machOne
             // 
+            this.machOne.cncAlarmImage = ((System.Drawing.Image)(resources.GetObject("machOne.cncAlarmImage")));
+            this.machOne.cncIdleImage = ((System.Drawing.Image)(resources.GetObject("machOne.cncIdleImage")));
             this.machOne.CncName = "label2";
+            this.machOne.cncPrepareImage = ((System.Drawing.Image)(resources.GetObject("machOne.cncPrepareImage")));
+            this.machOne.cncRunImage = ((System.Drawing.Image)(resources.GetObject("machOne.cncRunImage")));
             this.machOne.CncStrFont = new System.Drawing.Font("Arial Narrow", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.machOne.CncStrForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.machOne.CncStrStatus = "label1";
@@ -198,6 +227,9 @@ namespace Feature1
             this.offlineSum.Location = new System.Drawing.Point(1366, 42);
             this.offlineSum.Name = "offlineSum";
             this.offlineSum.Size = new System.Drawing.Size(300, 149);
+            this.offlineSum.statusImage = null;
+            this.offlineSum.statusName = "label1";
+            this.offlineSum.statusSum = "*";
             this.offlineSum.TabIndex = 4;
             // 
             // idleSum
@@ -205,6 +237,9 @@ namespace Feature1
             this.idleSum.Location = new System.Drawing.Point(1036, 42);
             this.idleSum.Name = "idleSum";
             this.idleSum.Size = new System.Drawing.Size(300, 149);
+            this.idleSum.statusImage = null;
+            this.idleSum.statusName = "label1";
+            this.idleSum.statusSum = "*";
             this.idleSum.TabIndex = 3;
             // 
             // alarmSum
@@ -212,6 +247,9 @@ namespace Feature1
             this.alarmSum.Location = new System.Drawing.Point(704, 42);
             this.alarmSum.Name = "alarmSum";
             this.alarmSum.Size = new System.Drawing.Size(300, 149);
+            this.alarmSum.statusImage = null;
+            this.alarmSum.statusName = "label1";
+            this.alarmSum.statusSum = "*";
             this.alarmSum.TabIndex = 2;
             // 
             // prepareSum
@@ -219,6 +257,9 @@ namespace Feature1
             this.prepareSum.Location = new System.Drawing.Point(374, 42);
             this.prepareSum.Name = "prepareSum";
             this.prepareSum.Size = new System.Drawing.Size(300, 149);
+            this.prepareSum.statusImage = null;
+            this.prepareSum.statusName = "label1";
+            this.prepareSum.statusSum = "*";
             this.prepareSum.TabIndex = 1;
             // 
             // runSum
@@ -226,7 +267,14 @@ namespace Feature1
             this.runSum.Location = new System.Drawing.Point(46, 42);
             this.runSum.Name = "runSum";
             this.runSum.Size = new System.Drawing.Size(300, 149);
+            this.runSum.statusImage = null;
+            this.runSum.statusName = "label1";
+            this.runSum.statusSum = "*";
             this.runSum.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // RadForm1
             // 
@@ -265,9 +313,12 @@ namespace Feature1
         private UserControl1 machSeven;
         private UserControl1 machSix;
         private UserControl1 machFive;
-        private UserControl1 machfour;
+        private UserControl1 machFour;
         private UserControl1 machThree;
         private UserControl1 machTwo;
         private UserControl1 machOne;
+        
+        MachineInfo machOneO = new Machine.MachineOne();
+        MachineInfo machTwoO = new Machine.MachineTwo();
     }
 }

@@ -20,13 +20,21 @@ namespace Feature1
         public string CncStrStatus{get =>this.statusStr.Text; set => this.statusStr.Text = value;}
         //文字字體設定
         public Font CncStrFont { get => this.statusStr.Font; set => this.statusStr.Font = value; }
+        //文字顏色
         public Color CncStrForeColor { get => this.statusStr.ForeColor; set => this.statusStr.ForeColor = value; }
 
-        
-        
+        public Image cncRunImage { get => this.pictureBox4.Image; set => this.pictureBox4.Image = value; }
+        public Image cncPrepareImage { get => this.pictureBox3.Image; set => this.pictureBox3.Image = value; }
+        public Image cncIdleImage { get => this.pictureBox5.Image; set => this.pictureBox5.Image = value; }
+        public Image cncAlarmImage { get => this.pictureBox2.Image; set => this.pictureBox2.Image = value; }
+
+
+
         //建立事件和觸發函數
+        
         public event EventHandler btnClick;
         public event PaintEventHandler paintChange;
+        public event EventHandler changeLabel;
         protected void OnbtnClick(EventArgs e)
         {
             if (btnClick != null) 
@@ -39,7 +47,11 @@ namespace Feature1
             if (paintChange != null)
                 paintChange(this, e);
         }
-        
+        protected void onChangeStatusText(EventArgs e)
+        {
+            if (changeLabel != null)
+                changeLabel(this, e);
+        }
         public UserControl1()
         {
             InitializeComponent();
@@ -55,7 +67,11 @@ namespace Feature1
         {
             onPanelChange(e);
         }
-
         
+        private void statusStr_TextChanged(object sender, EventArgs e)
+        {
+            Console.WriteLine("TextChange : "+e);
+            onChangeStatusText(e);
+        }
     }
 }

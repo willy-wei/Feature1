@@ -112,6 +112,7 @@ namespace Feature1
             this.statusStr.Size = new System.Drawing.Size(100, 42);
             this.statusStr.TabIndex = 5;
             this.statusStr.Text = "label1";
+            this.statusStr.TextChanged += new System.EventHandler(this.statusStr_TextChanged);
             // 
             // pictureBox5
             // 

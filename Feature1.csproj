@@ -91,6 +91,7 @@
     <Compile Include="MachineInfo.cs" />
     <Compile Include="Machine\MachineOne.cs" />
     <Compile Include="Machine\Machines.cs" />
+    <Compile Include="Machine\MachineTwo.cs" />
     <Compile Include="RadForm1.cs">
       <SubType>Form</SubType>
     </Compile>
